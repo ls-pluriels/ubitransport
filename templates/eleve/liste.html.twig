@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Liste des élèves
+{% endblock %}
+
+{% block body %}
+<h1>Liste des élèves</h1>
+{% if not eleves %}
+Aucun élève inscrit.
+{% else %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Date de naissance</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+    <tbody>
+    {% for eleve in eleves %}
+    <tr>
+        <th scope="row">{{ eleve.nom }}</th>
+        <td>{{ eleve.prenom }}</td>
+        <td>{{ eleve.dateNaissance|date("d/m/Y") }}</td>
+        <td><a href="{{ path('eleve_view', {'id': eleve.id}) }}">Détail</a></td>
+        <td><a href="{{ path('eleve_edit', {'id': eleve.id}) }}">Editer</a></td>
+        <td><a href="{{ path('eleve_delete', {'id': eleve.id}) }}">Supprimer</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% endif %}
+{% endblock %}
