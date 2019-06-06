@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Editer la fiche Elève {{eleve.prenom}} {{eleve.nom}}
+{% endblock %}
+
+{% block body %}
+<h1>
+Editer la fiche Elève {{eleve.prenom}} {{eleve.nom}}
+</h1>
+{{ form(form) }}
+<a href="{{ path('index')}}">Retour à la liste</a>
+{% endblock %}

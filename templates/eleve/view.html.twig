@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Elève {{eleve.prenom}} {{eleve.nom}}
+{% endblock %}
+
+{% block body %}
+<h1>Elève {{eleve.prenom}} {{eleve.nom}}</h1>
+Date de naissance : {{eleve.dateNaissance|date("d/m/Y")}}
+
+{% if notes %}
+    <h2>Notes</h2>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note.matiere }} {{ note.evaluation }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{{ form(form) }}
+<a href="{{ path('index')}}">Retour à la liste</a>
+{% endblock %}

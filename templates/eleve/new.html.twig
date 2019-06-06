@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Nouvel élève
+{% endblock %}
+
+{% block body %}
+    {{ form(form) }}
+    <a href="{{ path('index')}}">Retour à la liste</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Confirmer la suppression
+{% endblock %}
+
+{% block body %}
+<h1>Veuillez confirmer la suppression de l'enregistrement</h1>
+<h2>Elève {{eleve.prenom}} {{eleve.nom}}</h2>
+Date de naissance : {{eleve.dateNaissance|date("d/m/Y")}}
+
+{{ form(form) }}
+{% endblock %}
