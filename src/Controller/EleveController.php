@@ -82,6 +82,7 @@ class EleveController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($note);
             $entityManager->flush();
+            $this->addFlash('success', 'La note a été ajoutée.');
             return $this->redirectToRoute('eleve_view', ['id' => $id]);
         }   
         return $this->render('eleve/view.html.twig', [

@@ -1,6 +1,6 @@
 { 
   "name": "test-technique",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript dependencies for test-technique project",
   "devDependencies": {
     "@symfony/webpack-encore": "^0.27.0",
