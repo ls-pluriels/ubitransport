@@ -1,0 +1,23 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+index:
+  path: /
+  controller: App\Controller\EleveController::liste
+
+eleve_new:
+  path: /eleve/new
+  controller: App\Controller\EleveController::new
+
+eleve_view:
+  path: /eleve/view/{id}
+  controller: App\Controller\EleveController::view
+
+eleve_edit:
+  path: /eleve/edit/{id}
+  controller: App\Controller\EleveController::edit
+
+eleve_delete:
+  path: /eleve/delete/{id}
+  controller: App\Controller\EleveController::delete
