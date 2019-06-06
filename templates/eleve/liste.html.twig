@@ -6,6 +6,8 @@ Liste des élèves
 
 {% block body %}
 <h1>Liste des élèves</h1>
+<h2><a href="{{ path("eleve_new") }}">Ajouter un nouvel élève</a></h2>
+
 {% if not eleves %}
 Aucun élève inscrit.
 {% else %}
