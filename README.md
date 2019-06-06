@@ -6,6 +6,7 @@ Déployer sur un serveur web, vous pouvez directement cloner le repository ans l
 
 ## Téléchargement des dépendances
 composer install
+
 yarn install
 
 ## Fichier .env.local.php
