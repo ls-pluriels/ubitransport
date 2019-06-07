@@ -2,12 +2,14 @@
 Test technique Ubitransport
 
 ## Déploiement
-Déployer sur un serveur web, vous pouvez directement cloner le repository ans le répertoire de destination. Le serveur web doit être configuré pour servir le fichier public/index.php
+Déployer sur un serveur web, j'ai choisi apache par simplicité avec le bundle apache-pack.
+Vous pouvez directement cloner le repository ans le répertoire de destination. 
+Le serveur web doit être configuré pour servir le fichier public/index.php
 
 ## Téléchargement des dépendances
-composer install
+composer install --no-dev
 
-yarn install
+yarn install --production=true
 
 ## Fichier .env.local.php
 ``` php
